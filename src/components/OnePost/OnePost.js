@@ -26,6 +26,18 @@ export default function OnePost() {
                         url
                     }
                 },
+                secundaryImage{
+                    asset->{
+                        _id,
+                        url
+                    }
+                },
+                thirdImage{
+                    asset->{
+                        _id,
+                        url
+                    }
+                },
                 body, 
                 "name": author->name,
                 "authorImage": author->image
@@ -38,6 +50,7 @@ export default function OnePost() {
 
     if (!postData) return <div>Loading...</div>
 
+    // const [inHover, setHover] = useState(false);
 
     return(
         <div>
@@ -51,6 +64,8 @@ export default function OnePost() {
                 </div>
             </div>
             <img src={urlFor(postData.mainImage).width(200).url()} alt="main representation of post" />
+            <img src={urlFor(postData.secundaryImage).width(200).url()} alt="main representation of post" />
+            <img src={urlFor(postData.thirdImage).width(200).url()} alt="main representation of post" />
             <div>
                 <BlockContent
                 blocks={postData.body}

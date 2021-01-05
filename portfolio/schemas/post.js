@@ -6,16 +6,24 @@ export default {
     {
       name: 'title',
       title: 'Title',
+      description: 'Keep title short',
       type: 'string',
     },
     {
       name: 'slug',
       title: 'Slug',
+      description: 'Path name',
       type: 'slug',
       options: {
         source: 'title',
         maxLength: 96,
       },
+    },
+    {
+      name: 'excerpt',
+      title: 'Excerpt',
+      description: 'Short text to improve SEO',
+      type: 'string',
     },
     {
       name: 'author',
@@ -26,6 +34,25 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      // alt:{
+      //   alt: 'string'
+      // }
+    },
+    {
+      name: 'secundaryImage',
+      title: 'Secundary image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'thirdImage',
+      title: 'Third image',
       type: 'image',
       options: {
         hotspot: true,
@@ -45,6 +72,11 @@ export default {
     {
       name: 'body',
       title: 'Body',
+      type: 'blockContent',
+    },
+    {
+      name: 'learnMore',
+      title: 'LearnMore',
       type: 'blockContent',
     },
   ],
