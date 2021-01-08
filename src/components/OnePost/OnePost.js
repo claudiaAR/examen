@@ -38,7 +38,7 @@ export default function OnePost() {
                         url
                     }
                 },
-                body, 
+                body, learnMore,
                 "name": author->name,
                 "authorImage": author->image
             }`,
@@ -66,9 +66,18 @@ export default function OnePost() {
             <img src={urlFor(postData.mainImage).width(200).url()} alt="main representation of post" />
             <img src={urlFor(postData.secundaryImage).width(200).url()} alt="main representation of post" />
             <img src={urlFor(postData.thirdImage).width(200).url()} alt="main representation of post" />
-            <div>
+            <div className="flex">
                 <BlockContent
                 blocks={postData.body}
+                projectId={sanityClient.clientConfig.projectId}
+                imageOptions={{w: 120, h: 140, fit: 'max'}}
+                dataset={sanityClient.clientConfig.dataset}
+                />
+            </div>
+            <div className="flex">
+                <BlockContent
+                blocks={postData.learnMore}
+                imageOptions={{w: 120, h: 140, fit: 'max'}}
                 projectId={sanityClient.clientConfig.projectId}
                 dataset={sanityClient.clientConfig.dataset}
                 />
