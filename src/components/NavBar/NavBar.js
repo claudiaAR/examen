@@ -7,10 +7,13 @@ export default function NavBar() {
             <div>
                 <nav>
                     <NavLink to="/" exact>
-                        Contact
+                        All projects
                     </NavLink>
                     <NavLink to="/:slug">
-                        About
+                        School project
+                    </NavLink>
+                    <NavLink to="/:slug">
+                        Internship
                     </NavLink>
                 </nav>
             </div>
