@@ -12,8 +12,6 @@ function App() {
         <Route component={AllPosts} path="/" exact />
         {/* slug is to display the correct blogpost from the sanity studio */}
         <Route component={OnePost} path="/:slug" />
-        <Route component={} path="/:slug" />
-       
       </Switch>
     <Footer />
     </BrowserRouter>
