@@ -1,0 +1,26 @@
+.flex{
+    // position: absolute;
+    // top: -10px;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.menu {
+    position: absolute;
+    z-index: 1000;
+    top: 466px;
+    display: flex;
+    left: calc(100% / 2 - 180px);
+     
+
+    *{
+        padding: 20px;
+        border: solid 1px black;
+        text-decoration: none;
+        color: black;
+    }
+
+}
