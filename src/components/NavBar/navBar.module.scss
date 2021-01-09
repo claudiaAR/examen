@@ -1,0 +1,24 @@
+.flex {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    position: absolute;
+    z-index: 1000;
+    top: 466px;
+    display: flex;
+    // left: calc(100% / 2 - 180px);
+     
+
+    *{
+        padding: 20px;
+        border: solid 1px black;
+        text-decoration: none;
+        color: black;
+    }
+
+}
