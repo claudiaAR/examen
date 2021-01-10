@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./allPosts.module.scss";
 import { useMousePosition } from "../Animation/useMousePosition"
 import Paint from "../Animation/Paint"
-// import Svg from "../../logo.svg";
-// import Bloop from "../../svgImages/yellowIllustrator.svg";
+
 
 export default function AllPosts() {
     const [allPostsData, setAllPosts] = useState(null);
@@ -32,11 +31,9 @@ export default function AllPosts() {
             <div className={styles.animationWrapper}>
                 <Paint className={styles.animation}color="#FFF490"/>
             </div>
-
             <div className={styles.landingTitle}>
             {position.x}:{position.y}
-                <h1 className="verticalText">Work</h1>
-                <h3>Welcome to my blog</h3>
+                <h1 className={styles.verticalText}>Work</h1>
             </div>
             {/* <Bloop /> */}
             <div className={styles.wrapper}>
