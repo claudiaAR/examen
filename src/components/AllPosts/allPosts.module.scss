@@ -88,6 +88,7 @@
     top: 0;
     position: absolute;
     z-index: 5;
+    width: 100vw;
     }
 
 @keyframes mymove {
@@ -100,17 +101,17 @@
     color: green;
 }
 
-@media only screen and (min-width: 800px) {
-    .wrapper {
-    //   background-color: lightblue;
-      padding: 30px 40px;
-      z-index:20;
-    }
+// @media only screen and (min-width: 800px) {
+//     .wrapper {
+//     //   background-color: lightblue;
+//       padding: 30px 40px;
+//       z-index:20;
+//     }
 
-    .heroImage {
-        width: 800px;
-        object-fit: cover;
-    }
-  }
+//     .heroImage {
+//         width: 800px;
+//         object-fit: cover;
+//     }
+//   }
 
 
