@@ -3,10 +3,12 @@ import AllPosts from "./components/AllPosts/AllPosts.js";
 import OnePost from "./components/OnePost/OnePost.js";
 import Footer from "./components/Footer/Footer.js";
 import NavBar from "./components/NavBar/NavBar.js";
+import TopNav from "./components/TopNav/TopNav.js";
 
 function App() {
   return (
     <BrowserRouter>
+    <TopNav />
     <NavBar />
       <Switch>
         <Route component={AllPosts} path="/" exact />
