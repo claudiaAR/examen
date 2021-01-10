@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom"
 import sanityClient from '../../client.js'
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
+import styles from "./onePost.module.scss";
+
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -66,7 +68,7 @@ export default function OnePost() {
             <img src={urlFor(postData.mainImage).width(200).url()} alt="main representation of post" />
             <img src={urlFor(postData.secundaryImage).width(200).url()} alt="main representation of post" />
             <img src={urlFor(postData.thirdImage).width(200).url()} alt="main representation of post" />
-            <div className="flex">
+            <div className={styles.flex}>
                 <BlockContent
                 blocks={postData.body}
                 projectId={sanityClient.clientConfig.projectId}
