@@ -1,15 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./topNav.modules.scss";
+import styles from "./topNav.module.scss";
 import Arrow from "../Animation/Arrow"
 
 
 export default function TopNav() {
     return (
-        <div>
-            <nav className={styles.test}>
+        <div className={styles.flex}>
+            <nav className={styles.topMenu}>
                 <NavLink to="/" exact>
-                    <Arrow />
+                    <Arrow className={styles.arrow}/>
                 </NavLink>
                 <NavLink to="/contacts">
                     Contact
