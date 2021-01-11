@@ -3,7 +3,6 @@ import sanityClient from "../../client.js";
 import { Link } from "react-router-dom";
 import styles from "./allPosts.module.scss";
 import { useMousePosition } from "../Animation/useMousePosition"
-import Paint from "../Animation/Paint"
 
 
 export default function AllPosts() {
@@ -28,9 +27,6 @@ export default function AllPosts() {
     }, [])
     return (
         <div className={styles.flex}>
-            <div className={styles.animationWrapper}>
-                <Paint className={styles.animation}color="#FFF490"/>
-            </div>
             <div className={styles.landingTitle}>
             {position.x}:{position.y}
                 <h1 className={styles.verticalText}>Work</h1>
