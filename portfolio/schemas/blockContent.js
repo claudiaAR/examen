@@ -49,6 +49,14 @@ export default {
                 name: 'href',
                 type: 'url',
               },
+              {
+                title: 'Alternative Text (A11y)',
+                name: 'alt',
+                type: 'string',
+                options: {
+                  isHighlighted: true
+                }
+              },
             ],
           },
         ],
