@@ -5,7 +5,7 @@ import styles from "./navBar.module.scss";
 export default function NavBar() {
     return (
         <header>
-            <div className={styles.flex}>
+            <div className={styles.flexWrapper}>
                 <nav className={styles.menu}>
                     <NavLink to="/" exact>
                         All projects

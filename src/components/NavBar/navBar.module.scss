@@ -1,4 +1,4 @@
-.flex {
+.flexWrapper {
     position: relative;
     width: 100%;
     display: flex;
@@ -10,7 +10,7 @@
     position: absolute;
     z-index: 1000;
     top: 466px;
-    display: flex;
+    // display: flex;
      
     * {
         padding: 20px;
