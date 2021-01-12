@@ -17,7 +17,8 @@ export default function AllPosts() {
                 mainImage{
                     asset ->{
                         _id,
-                        url
+                        url,
+                        alt,
                     }
                 }
             }`
@@ -37,7 +38,7 @@ export default function AllPosts() {
                     allPostsData.map((post, index) => (
                         <Link to={'/' + post.slug.current} key={post.slug.current}>
                             <span key={index}>
-                                <img className={styles.heroImage} src={post.mainImage.asset.url} alt="visuall representation of the blog"/>
+                                <img className={styles.heroImage} src={post.mainImage.asset.url} caption={post.mainImage.caption} alt={post.mainImage.alt}/>
                                 {/* <span> */}
                                     <h2 className={styles.title}>{post.title}</h2>
                                 {/* </span> */}
