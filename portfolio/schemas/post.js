@@ -39,20 +39,28 @@ export default {
         hotspot: true,
       },
       fields: [
+        // {
+        //   name: 'caption',
+        //   type: 'string',
+        //   title: 'Caption',
+        //   options: {
+        //     isHighlighted: true // <-- make this field easily accessible
+        //   }
+        // },
         {
-          name: 'caption',
+          title: 'Alternative Text (A11y)',
+          name: 'alt',
           type: 'string',
-          title: 'Caption',
           options: {
             isHighlighted: true // <-- make this field easily accessible
           }
         },
-        {
-          // Editing this field will be hidden behind an "Edit"-button
-          name: 'attribution',
-          type: 'string',
-          title: 'Attribution',
-        }
+        // {
+        //   // Editing this field will be hidden behind an "Edit"-button
+        //   name: 'attribution',
+        //   type: 'string',
+        //   title: 'Attribution',
+        // }
       ]
       // alt:{
       //   alt: 'string'
@@ -65,6 +73,17 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          title: 'Alternative Text (A11y)',
+          name: 'alt',
+          type: 'string',
+          options: {
+            isHighlighted: true
+          }
+        }
+
+      ]
     },
     {
       name: 'thirdImage',
@@ -73,6 +92,16 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          title: 'Alternative Text (A11y)',
+          name: 'alt',
+          type: 'string',
+          options: {
+            isHighlighted: true
+          }
+        }
+      ]
     },
     {
       name: 'categories',
