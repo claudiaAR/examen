@@ -4,12 +4,13 @@ import sanityClient from '../../client.js'
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
 import styles from "./onePost.module.scss";
+import Paint from "../Animation/Paint"
 
 
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-    return builder.image(source);
-}
+// const builder = imageUrlBuilder(sanityClient);
+// // function urlFor(source) {
+//     return builder.image(source);
+// }
 
 export default function OnePost() {
     const [postData, setPostData] = useState(null);
@@ -56,33 +57,50 @@ export default function OnePost() {
 
     return(
         <div>
-            <div>
-                <h2>{postData.title}</h2>
+             <Paint className={styles.animation}color="#73D082"/>
+            <div className={styles.titelWrapper}>
+
+            <h1 className={styles.verticalText}>{postData.title}</h1>
                 <div>
-                    <img src={urlFor(postData.authorImage).width(100).url()}
+                    {/* <img src={urlFor(postData.authorImage).width(100).url()}
                     alt="Claudia is the author of the blog"
+                    /> */}
+                     {/* <h1 className={styles.verticalText}>{postData.name}</h1> */}
+                </div> 
+            </div>
+
+            <div className={styles.story}>
+                {/* <img className={styles.heroImage} 
+                    src={urlFor(postData.mainImage).width(600).url()} 
+                    alt={postData.alt} 
+                    projectId={sanityClient.clientConfig.projectId}
+                    dataset={sanityClient.clientConfig.dataset}
+                />
+                 */}
+                <div className={styles.text}>
+                    <BlockContent
+                    blocks={postData.body}
+                    imageOptions={{w: 500, fit: 'max'}}
+                    projectId={sanityClient.clientConfig.projectId}
+                    dataset={sanityClient.clientConfig.dataset}
                     />
-                    <h4>{postData.name}</h4>
                 </div>
             </div>
-            <img src={urlFor(postData.mainImage).width(200).url()} alt="main representation of post" />
-            <img src={urlFor(postData.secundaryImage).width(200).url()} alt="main representation of post" />
-            <img src={urlFor(postData.thirdImage).width(200).url()} alt="main representation of post" />
-            <div className={styles.flex}>
-                <BlockContent
-                blocks={postData.body}
-                projectId={sanityClient.clientConfig.projectId}
-                imageOptions={{w: 120, h: 140, fit: 'max'}}
-                dataset={sanityClient.clientConfig.dataset}
-                />
-            </div>
-            <div className="flex">
-                <BlockContent
-                blocks={postData.learnMore}
-                imageOptions={{w: 120, h: 140, fit: 'max'}}
-                projectId={sanityClient.clientConfig.projectId}
-                dataset={sanityClient.clientConfig.dataset}
-                />
+
+            <div className={styles.storyTwo}>
+                {/* <img className={styles.heroImage} src={urlFor(postData.secundaryImage).width(200).url()} alt="main representation of post" />
+                <img className={styles.heroImage} src={urlFor(postData.thirdImage).width(200).url()} alt="main representation of post" /> */}
+            
+            
+                <div className={styles.text}>
+                    <BlockContent
+                    // className={styles.test}
+                    blocks={postData.learnMore}
+                    imageOptions={{w: 500, fit: 'max'}}
+                    projectId={sanityClient.clientConfig.projectId}
+                    dataset={sanityClient.clientConfig.dataset}
+                    />
+                </div>
             </div>
         </div>
     )

@@ -1,14 +1,138 @@
-.flex{
-    display: flex; 
-    background: hotpink;
+.text{
+    // background: hotpink;
     padding: 4rem;
-    border: solid 3px yellow;
+    // border: solid 3px yellow;
+    position: relative;
    
+    * {
+        // background: thistle;
+        // padding: 1rem;
+        // border: solid 3px rebeccapurple;
+        display: flex;
+    }
+
+    ul li{
+        // border: solid 3px pink;
+    }
+
+    img{
+        // border: solid 3px salmon;
+    }
+
+    h1{
+        // border: solid 3px darkcyan;
+        transform: rotate(90deg);
+        position: absolute;
+        left: 153px;
+        top: 244px;
+    }
+    p{
+        // border: solid 3px olivedrab;
+        flex-direction: row;
+        padding: 90px 146px;
+        max-width: 60%;
+    }
 }
-// .flex:nth-child(1){
-//     display: flex; 
-//     background: hotpink;
-//     padding: 4rem;
-//     border: solid 3px yellow;
-   
-// }
+
+
+
+
+.story {
+    margin-top: 20rem;
+    // border: green solid 3px;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.storyTwo {
+    margin-top: 2rem;
+    // border: green solid 3px;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.titelWrapper {
+    flex-wrap: wrap;
+    overflow-x: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+    // position: relative;
+    // height: 100%;
+    padding: calc(100% * 30px);
+    
+    // position: absolute;
+    z-index: 1000;
+    // top: 466px;
+    width: 100%;
+
+    .heroImage {
+        width: 500px; 
+        // border: pink solid 2px;
+        // place-self: center;
+        // width: 100%;
+        max-width: 400px;
+        height: 400px;
+        object-fit: cover;
+        margin-right: 30px;
+        box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1),0 0 0 rgba(0, 0, 0, 0.2);;
+        // border-radius: 2px 30px 2px 30px;
+        z-index: 70;
+    }
+
+//     .heroImage a:hover{
+//         animation: 1s pulse;
+//     }
+
+
+//     @keyframes pulse {
+//         from {
+//           transform: scale3d(1, 1, 1);
+//           border: 3px solid pink;
+//         }
+//         50% {
+//           transform: scale3d(1.05, 1.05, 1.05);
+//           border: 3px solid green;
+
+//         }
+//         to {
+//           transform: scale3d(1, 1, 1);
+//           border: 3px solid yellow;
+
+//         }
+//       }
+}
+
+.verticalText {
+    // transform: rotate(-57deg);
+    transform: rotate(90deg);
+    color: black;
+    font-size: 60px;   
+    margin-top: 180px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in;
+    border: solid 4px red;
+    max-width: 70%;
+
+}
+
+.animation {
+    animation: mymove ease-out 2.8s ;
+    top: 0;
+    position: absolute;
+    // z-index: 5;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes mymove {
+    from {
+      height:0vh;
+    }
+    to {
+        height:100vh;
+    }
+  }
