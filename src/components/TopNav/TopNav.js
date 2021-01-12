@@ -11,7 +11,7 @@ export default function TopNav() {
             <div className={styles.animationWrapper}>
                 <Paint className={styles.animation}color="#FFF490"/>
             </div>
-        <div className={styles.flex}>
+        <div className={styles.navWrapper}>
             <nav className={styles.topMenu}>
                 <NavLink to="/" exact>
                     <Arrow className={styles.arrow}/>

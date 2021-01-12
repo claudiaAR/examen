@@ -1,4 +1,4 @@
-.flex {
+.navWrapper {
     position: relative;
 
     .topMenu {
@@ -7,7 +7,6 @@
         justify-content: space-between;
         z-index: 1;
         width: 100vw;
-    
     }
 
      a:nth-child(1){
@@ -26,14 +25,15 @@
 .animationWrapper{
     position: relative;
 }
+
 .animation {
-    animation: mymove ease-out 3s ;
+    animation: mymove ease-out 3s;
     top: 0;
     position: absolute;
     // z-index: 5;
     width: 100vw;
     height: 100vh;
-    }
+}
 
 @keyframes mymove {
     from {
