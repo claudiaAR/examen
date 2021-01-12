@@ -11,7 +11,6 @@ function Paint(props) {
           188 21 56-57 303-497 303-497z"
           // fill="#FFF491"
           fill="currentColor"
-          animate
         />
       </svg>
     </div>
