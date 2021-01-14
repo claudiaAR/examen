@@ -116,6 +116,7 @@ export default {
     },
     {
       name: 'body',
+      description: 'Use h3 to make text apper vertically beside the first sections 3 images',
       title: 'Body',
       type: 'blockContent',
     },
