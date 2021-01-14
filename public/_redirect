@@ -1,5 +1,3 @@
-/*  index.html  200 
-
 # Example from netlify.toml for Netlify.com hosting
 [[redirects]]
   from="/*"
