@@ -11,16 +11,30 @@
 
 
 .title {
-    position: relative;
-    top: -67px;
-    background-color: aquamarine;
-    width: 400px;
-    height: 66px;
-    text-align: center;
-    padding-top: 15px;
+    // position: relative;
+    // top: -67px;
+    // background-color: aquamarine;
+    // width: 400px;
+    // height: 66px;
+    // text-align: center;
+    // padding-top: 15px;
     // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
     // border-radius: 2px 2px 2px 30px;
+
+    display: none;
+    position: relative;
+    // top: -380px;
+    // right: -32px;
+    // width: 400px;
+}
+
+.title:hover {
+  display: block;
+  position: relative;
+  top: -380px;
+  right: -32px;
+  width: 400px;
 }
 
 .wrapper {
@@ -47,31 +61,31 @@
         // width: 100%;
         max-width: 400px;
         height: 400px;
-        object-fit: cover;
-        margin-right: 30px;
-        box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1),0 0 0 rgba(0, 0, 0, 0.2);;
-        // border-radius: 2px 30px 2px 30px;
+        object-fit: scale-down;
+        box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
         z-index: 70;
+        flex: 0 0 calc(50% - 0.5em);
+        margin: 0 calc(115px / 4);
     }
 
-    .heroImage a:hover{
-        animation: 1s pulse;
+    .heroImage:hover{
+        animation: pulse 1s;
     }
 
 
     @keyframes pulse {
         from {
           transform: scale3d(1, 1, 1);
-          border: 3px solid pink;
+          bordetr: hotpink 15px solid;
         }
         50% {
           transform: scale3d(1.05, 1.05, 1.05);
-          border: 3px solid green;
+          bordetr: hotpink 15px solid;
 
         }
         to {
           transform: scale3d(1, 1, 1);
-          border: 3px solid yellow;
+          bordetr: hotpink 15px solid;
 
         }
       }

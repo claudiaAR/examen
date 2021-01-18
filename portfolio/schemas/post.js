@@ -81,6 +81,14 @@ export default {
           options: {
             isHighlighted: true
           }
+        },
+        {
+          title: 'remove image', 
+          name: 'hide',
+          type: 'boolean' , 
+          options: {
+            isHighlighted: true
+          }
         }
 
       ]
@@ -99,7 +107,7 @@ export default {
           type: 'string',
           options: {
             isHighlighted: true
-          }
+          },
         }
       ]
     },
@@ -124,6 +132,19 @@ export default {
       name: 'learnMore',
       title: 'LearnMore',
       type: 'blockContent',
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      description: 'add relevent taggs for improve SEO',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
     },
   ],
 

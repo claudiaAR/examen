@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-.flex {
-    
-    padding: 3rem 0;
-    position: fixed;
-    // bottom: 0;
-    width: 100%;
-    background: white;
-}
 
 .footerWrapper {
     display: flex;
@@ -20,12 +12,18 @@
     bottom: 0;
     background: white;
     width: 100%;
+    margin-top: 90px;
 
     .col {
         width: 35%;
-        border: solid black 1px;
+        border-top: solid rgb(46, 45, 45) 1px;
+        border-bottom: solid rgb(46, 45, 45) 1px;
+        border-left: solid rgb(46, 45, 45) 1px;
         text-align: center;
         padding: 2rem;
     }
+    // .col:hover{
+        
+    // }
 }
 
