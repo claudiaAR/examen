@@ -5,9 +5,27 @@
 }
 
 .flex {
-    background: hotpink;
-    padding: 3rem;
-    position: absolute;
+    
+    padding: 3rem 0;
+    position: fixed;
     // bottom: 0;
     width: 100%;
+    background: white;
 }
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    width: 100%;
+
+    .col {
+        width: 35%;
+        border: solid black 1px;
+        text-align: center;
+        padding: 2rem;
+    }
+}
+

@@ -1,30 +1,13 @@
-// export default {
-//     type: 'landingPage',
-//     name: 'LandingPage',
-//     fields: [
-//       {
-//         type: 'string',
-//         name: 'title'
-//       },
-//       {
-//         type: 'array',
-//         name: 'items',
-//         of: [{ type: 'cta' }]
-//       }
-//     ]
-//   }
-
-
 export default {
     name: 'footer',
     title: 'footer',
     type: 'document',
-  
     fields: [
       {
         name: 'title',
         title: 'Title',
         type: 'string',
+        description: 'This will be shown in the middle',
       },
       {
         name: 'slug',
@@ -38,40 +21,27 @@ export default {
       },
       {
         name: 'iconOne',
-        title: 'first icon',
+        title: 'icon first',
         type: 'image',
         options: {
-          hotspot: false,
-        },
+          hotspot: true,
+        }, 
+      },
+      {
+        name: 'linkOne',
+        type: 'url',
       },
       {
         name: 'iconTwo',
-        title: 'second icon',
+        title: 'icon second',
         type: 'image',
         options: {
-          hotspot: false,
+          hotspot: true,
         },
       },
       {
-        name: 'footerText',
-        title: 'footer text',
-        type: 'text',
+        name: 'linkTwo',
+        type: 'url',
       },
-      {
-        name: 'iconThree',
-        title: 'three icon',
-        type: 'image',
-        options: {
-          hotspot: false,
-        },
-      },
-      {
-        name: 'iconFour',
-        title: 'four icon',
-        type: 'image',
-        options: {
-          hotspot: false,
-        },
-      }
     ],
   }
