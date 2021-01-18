@@ -1,141 +1,95 @@
-import React from "react";
-// import sanityClient from "../../client.js";
-// import { Link } from "react-router-dom";
+import React, {useEffect, useState } from "react";
+import sanityClient from "../../client.js";
 import styles from "./footer.module.scss";
-// import { HomeIcon } from '@material-ui/icons';
-// import { useMousePosition } from "../Animation/useMousePosition"
-// import Paint from "../Animation/Paint"
-// import imageUrlBuilder from "@sanity/image-url"
-// import BlockContent from "@sanity/block-content-to-react"
-// import { useParams } from "react-router-dom"
+import imageUrlBuilder from "@sanity/image-url"
 
-// const builder = imageUrlBuilder(sanityClient);
-// function urlFor(source) {
-//     return builder.image(source);
-// }
 
-export default function Footer() {
-    // const [footerData, setFooterData] = useState(null);
-    // // //react hook useParams
-    // const { slug } = useParams();
-
-    // // GROQ query 
-    // useEffect(() => {
-    //     sanityClient.fetch(
-    //         `*[slug.current == $slug]{
-    //             title,
-    //             slug,
-    //             iconOne{
-    //                 asset->{
-    //                     _id,
-    //                     url
-    //                 }
-    //             },
-    //             iconTwo{
-    //                 asset->{
-    //                     _id,
-    //                     url
-    //                 }
-    //             },
-    //             iconTwo{
-    //                 asset->{
-    //                     _id,
-    //                     url
-    //                 }
-    //             },
-    //             footerText,
-    //             iconThree{
-    //                 asset->{
-    //                     _id,
-    //                     url
-    //                 }
-    //             },
-    //             iconFour{
-    //                 asset->{
-    //                     _id,
-    //                     url
-    //                 }
-    //             },
-    //         }`,
-    //         { slug }
-    //     )
-    //     .then((data) => setFooterData(data[0]))
-    //     .catch(console.error);
-    // }, [slug]);
-
-    // if (!footerData) return <div>Loading...</div>
-
-    return (
-        <div className={styles.flex}>
-            <div className={styles.landingTitle}>
-                <h1 className="verticalText">Footer</h1>
-                <h3>This is my footer</h3>
-            </div>
-        </div>
-    )
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+    return builder.image(source);
 }
 
-// import React, { useEffect, useState } from "react";
-// import sanityClient from "../../client.js";
-// // import { Link } from "react-router-dom";
-// import styles from "./footer.module.scss";
-// // import { useMousePosition } from "../Animation/useMousePosition"
-// // import Paint from "../Animation/Paint"
-// // import imageUrlBuilder from "@sanity/image-url"
-// import BlockContent from "@sanity/block-content-to-react"
-// import { useParams } from "react-router-dom"
+export default function Footer() {
+    const [footerData, setFooterData] = useState(null);
 
+    useEffect(() => {
+        sanityClient.fetch(
+            `*[_type == "footer"]{
+                title,
 
+                iconOne {
+                    asset->{
+                        _id,
+                        url
+                    }
+                },
+                linkOne,
+                iconTwo{
+                    asset->{
+                        _id,
+                        url
+                    }
+                },
+                linkTwo,
+                iconThree{
+                    asset->{
+                        _id,
+                        url
+                    }
+                },
+            }`,
+        )
+        .then((data) => setFooterData(data[0]))
+        .catch(console.error)
+        // run one time
+    }, []);
 
-// // import Svg from "../../logo.svg";
-// // import Bloop from "../../svgImages/yellowIllustrator.svg";
+     if (!footerData) return <div>Loading...</div>
 
-// // const builder = imageUrlBuilder(sanityClient);
-// // function urlFor(source) {
-// //     return builder.image(source);
-// // }
+    return (
+        <div>
+            <div className={styles.footerWrapper}>
+                <div className={styles.col}>
+                <a 
+                    href={footerData.link}
+                    alt='this'
+                    taget="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img  
+                        src={urlFor(footerData.iconOne).width(50).url()} 
+                        alt="social media" 
+                    /> 
+                    </a>
+                  
+                </div>
 
-// export default function Footer() {
-//     const [postData, setPostData] = useState(null);
+                <h1 className={styles.col}>
+                    {footerData.title}
+                    {/* <a 
+                    href={footerData.link}
+                    alt={footerData.title}
+                    taget="_blank"
+                    rel="noopener noreferrer"
+                    >{footerData.title}</a> */}
+                </h1>
 
-//     const { slug } = useParams();
-
-//     // GROQ query 
-//     useEffect(() => {
-//         sanityClient.fetch(
-//             `*[slug.current == $slug]{
-//                 title,
-//                 slug,
-//                 learnMore,
-//             }`,
-//             { slug }
-//         )
-//         .then((data) => setPostData(data[0]))
-//         .catch(console.error);
-//     }, [slug]);
-
-//     if (!postData) return <div>Loading...</div>
-
-//     return (
-//         <div className={styles.flex}>
-//             {/* <div className={styles.landingTitle}>
-//                 <h1 className="verticalText">Footer</h1>
-
-//                 <h3>This is my footer</h3>
-
-//                 <div>
-
-//                 </div>
-//             </div> */}
-
-//             <div className="flex">
-//                 <BlockContent
-//                 blocks={postData.learnMore}
-//                 imageOptions={{w: 120, h: 140, fit: 'max'}}
-//                 projectId={sanityClient.clientConfig.projectId}
-//                 dataset={sanityClient.clientConfig.dataset}
-//                 />
-//             </div>
-//         </div>
-//     )
-// }
+                 <div className={styles.col}>
+                 <a 
+                    href={footerData.link}
+                    alt='this'
+                    taget="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    
+                        <img  
+                            src={urlFor(footerData.iconTwo).width(48).url()} 
+                            alt="social media" 
+                        /> 
+                    </a>
+                </div>
+            </div>
+        </div>
+     
+    )
+}
