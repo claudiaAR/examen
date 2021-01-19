@@ -47,6 +47,7 @@
     // height: 100vh;
     // justify-self: center;
     padding: calc(100% * 30px);
+    border-bottom: solid white 220px;
     // display: grid;
     // column-gap: 2rem;
 
@@ -62,30 +63,30 @@
         max-width: 400px;
         height: 400px;
         object-fit: scale-down;
-        box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
+        // box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
         z-index: 70;
         flex: 0 0 calc(50% - 0.5em);
-        margin: 0 calc(115px / 4);
+        // margin: 0 calc(115px / 4);
+        margin: 20px calc(183px / 4);
+        padding: 3rem;
     }
 
     .heroImage:hover{
         animation: pulse 1s;
+        box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
+        
     }
 
 
     @keyframes pulse {
         from {
           transform: scale3d(1, 1, 1);
-          bordetr: hotpink 15px solid;
         }
         50% {
           transform: scale3d(1.05, 1.05, 1.05);
-          bordetr: hotpink 15px solid;
-
         }
         to {
           transform: scale3d(1, 1, 1);
-          bordetr: hotpink 15px solid;
 
         }
       }

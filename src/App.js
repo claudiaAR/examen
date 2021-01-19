@@ -20,8 +20,8 @@ function App() {
           {/* slug is to display the correct blogpost from the sanity studio */}
           <Route component={OnePost} path="/:slug" />
           <Route component={Contact} path="/contact" />
-          <Route component={SchoolProjects} path="/schoolProject" />
-          <Route component={Internship} path="/Internship" />
+          <Route component={SchoolProjects} path="/schoolProjects" />
+          <Route component={Internship} path="/internship" />
         </Switch>
       <Footer />
     </BrowserRouter>

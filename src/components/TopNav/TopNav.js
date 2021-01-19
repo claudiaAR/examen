@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import styles from "./topNav.module.scss";
 import Arrow from "../Animation/Arrow"
 import Paint from "../Animation/Paint"
-// import Contact from "../Contact/Contact.js";
 
 
 export default function TopNav() {
@@ -17,8 +16,7 @@ export default function TopNav() {
                 <NavLink to="/" exact>
                     <Arrow className={styles.arrow}/>
                 </NavLink>
-                <NavLink to="/contact">
-                    {/* <Contact /> */}
+                <NavLink to="/contacts">
                     Contact
                 </NavLink>
             </nav>

@@ -26,6 +26,11 @@ export default {
       },
     },
     {
+      name: 'figure',
+      type: 'figure',
+      title: 'Figure',
+    },
+    {
       name: 'bio',
       title: 'Bio',
       type: 'array',
