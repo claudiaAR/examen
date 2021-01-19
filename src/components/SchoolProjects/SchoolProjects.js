@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link, useLocation } from "react-router-dom";
-import styles from "./allPosts.module.scss";
+// import styles from "./allPosts.module.scss";
 import { useMousePosition } from "../Animation/useMousePosition"
 
-
-
-export default function AllPosts() {
+export default function SchoolProjects() {
     const [allPostsData, setAllPosts] = useState(null);
     const position = useMousePosition();
     const location = useLocation()
@@ -15,7 +13,7 @@ export default function AllPosts() {
     useEffect(() => {
         sanityClient
         .fetch(
-            `*[_type == "post" ]{
+            `*[_type == "post" || *["wordpress" in tags] ]{
                 title,
                 slug,
                 tags,
@@ -33,32 +31,21 @@ export default function AllPosts() {
         .catch(console.error)
     }, [])
     return (
-        <div className={styles.flex}>
-            <div className={styles.landingTitle}>
-            {position.x}:{position.y}
-                <h1 className={styles.verticalText}>Work</h1>
-            </div>
-
-            <div className={styles.wrapper}>
+        <div>
+            <h1>This is the SchoolProjects page</h1>
+            <div >
                 {allPostsData &&
                     allPostsData.map((post, index) => (
                         <Link to={'/' + post.slug.current} key={post.slug.current}>
                             <span key={index}>
-                                <img className={styles.heroImage} 
-                                    src={post.mainImage.asset.url} 
-                                    caption={post.mainImage.caption} 
-                                    alt={post.mainImage.alt}
-                                />
+                                <img  src={post.mainImage.asset.url} caption={post.mainImage.caption} alt={post.mainImage.alt}/>
                               
-                                <h2 className={styles.title}>
-                                    {post.title}
-                                </h2>
+                                    <h2 >{post.title}</h2>
                             </span>
                         </Link>
 
                     ))}
-               
-            </div>
+               </div>
         </div>
     )
 }

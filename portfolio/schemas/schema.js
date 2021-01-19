@@ -10,6 +10,9 @@ import category from './category'
 import post from './post'
 import author from './author'
 import footer from './footer'
+import localString from './localString'
+import richText from './richText'
+import figure from './figure'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,5 +30,8 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
+    localString,
+    richText,
+    figure
   ]),
 })

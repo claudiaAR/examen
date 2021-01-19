@@ -81,6 +81,14 @@ export default {
           options: {
             isHighlighted: true
           }
+        },
+        {
+          title: 'remove image', 
+          name: 'hide',
+          type: 'boolean' , 
+          options: {
+            isHighlighted: true
+          }
         }
 
       ]
@@ -99,7 +107,7 @@ export default {
           type: 'string',
           options: {
             isHighlighted: true
-          }
+          },
         }
       ]
     },
@@ -115,6 +123,11 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'bodyTwo',
+      title: 'New rich text',
+      type: 'richText'
+    },
+    {
       name: 'body',
       description: 'Use h3 to make text apper vertically beside the first sections 3 images',
       title: 'Body',
@@ -124,6 +137,19 @@ export default {
       name: 'learnMore',
       title: 'LearnMore',
       type: 'blockContent',
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      description: 'add relevent taggs for improve SEO',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
     },
   ],
 

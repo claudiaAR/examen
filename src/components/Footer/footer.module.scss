@@ -4,28 +4,49 @@
     box-sizing: border-box;
 }
 
-.flex {
-    
-    padding: 3rem 0;
-    position: fixed;
-    // bottom: 0;
-    width: 100%;
-    background: white;
-}
 
 .footerWrapper {
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    // position: sticky;
+    position: fixed;
     bottom: 0;
     background: white;
     width: 100%;
-
-    .col {
+    margin-top: 190px;
+  
+    .col{
         width: 35%;
-        border: solid black 1px;
+        border-top: solid rgb(46, 45, 45) 1px;
+        border-bottom: solid rgb(46, 45, 45) 1px;
+        border-left: solid rgb(46, 45, 45) 1px;
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
+        background: linear-gradient(to bottom, #000 50%, #fff 50%);
+        background-size: 100% 200%;
+        background-position: bottom left;
+        transition: all .5s ease-out;
     }
+    
+
+    .col:hover{
+        background-position: top left;
+       
+    }
+    
+    .col:nth-child(2):hover:before{
+        content: "Hello 👋 Lets talk";
+        color: pink;
+        left: 90px;
+        // border-top: solid rgb(46, 45, 45) 160px;
+       
+        position: relative;
+        top:0;
+        // transform: scaleX(1);
+        // transition: transform 0.3s ease-in;
+    }
+    // .col:nth-child(2):hover:after{
+    //     content: " ME ";
+    // }
 }
 

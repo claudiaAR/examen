@@ -1,5 +1,5 @@
-.stayInPlace {
-    overflow-x: hidden;
+.onePostWrapper {
+    overflow-x: auto;
     // background-color: peru;
 }
 
@@ -45,14 +45,14 @@
 .spanSvg {
     // border: solid 3px darkcyan;
     // transform: rotate(90deg);
-    // position: absolute;
+    position: absolute;
     // left: 153px;
     // top: 44rem;
-    animation: hello 5s ease-in-out 2s  normal forwards ;
+    animation: hello 5s ease-in-out 2s normal forwards ;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     // animation: hello 8s infinite;
-    position: sticky;
+    // position: sticky;
     left: 641px;
     top: 35rem;
     font-size: 70px;
@@ -68,39 +68,6 @@
     to {
         stroke-dashoffset: 0;
       }
-    // 0.0%{
-    //     transform: scale(1) translate(-300px, 0) skew(0deg);
-    //     opacity: 1;
-    // }
-    // 39.9%{
-    //     transform: scale(1) translate(100px, 0) skew(-5deg);
-    //     stroke-dashoffset: 225;
-    //     opacity: 1;
-    // }
-    // 45.3%{
-    //     transform: scale(1) translate(100px, -6px) skew(0deg);
-    //     opacity: 0;
-    //     stroke-dashoffset: 226;
-    // }
-    // 5.1%{
-    //     transform: scale(1) translate(-100px, 0) skew(-12deg);
-    // }
-    // 50.3%{
-    //     transform: scale(1) translate(100px, 0px) skew(0deg);
-    //     opacity: 0.5;
-    // }
-    // 55.3%{
-    //     transform: scale(1) translate(100px, -10px) skew(0deg);
-    //     stroke-dashoffset: 149;
-    //     opacity: 0.5;
-    // }
-    // 60.3%{
-    //     transform: scale(1) translate(100px, 0px) skew(5deg);
-        
-    // }
-    // 99.3%{
-    //     transform: scale(1) translate(-300px, 0px) skew(0deg);
-    // }
 }
 
 
@@ -122,7 +89,7 @@
 }
 .storyTest {
     margin-top: 2rem;
-   
+    border-bottom: 120px solid white;
     // border: solid pink 3px;
 
 }
@@ -205,6 +172,7 @@
     // height: 400px;
     // width: 100vw;
     margin-top: 18rem;
+    border-bottom: 120px solid white;
     // overflow: hidden;
 
     *{

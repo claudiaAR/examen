@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./navBar.module.scss";
+// import Internship from "../Internship/Internship.js";
 
 export default function NavBar() {
+    
     return (
         <header>
             <div className={styles.flexWrapper}>
@@ -10,11 +12,12 @@ export default function NavBar() {
                     <NavLink to="/" exact>
                         All projects
                     </NavLink>
-                    <NavLink to="/projects">
+                    <NavLink to="/schoolProjects">
                         School project
                     </NavLink>
                     <NavLink to="/internship">
                         Internship
+                        {/* <Internship /> */}
                     </NavLink>
                 </nav>
             </div>
