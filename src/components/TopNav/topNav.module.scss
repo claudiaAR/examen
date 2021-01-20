@@ -37,7 +37,10 @@
 
 .animation {
     animation: mymove ease-out 3s;
-    top: 0;
+    top: -13px;
+    // right: 150px;
+    // left: 641px;
+    // top: 35rem;
     position: absolute;
     // z-index: 5;
     width: 100vw;
