@@ -14,6 +14,10 @@
     background: white;
     width: 100%;
     margin-top: 190px;
+
+    h1{
+        font-size: 100%;
+    }
   
     .col{
         width: 35%;
@@ -35,9 +39,9 @@
     }
     
     .col:nth-child(2):hover:before{
-        content: "Hello 👋 Lets talk";
+        content: "Hello 👋";
         color: pink;
-        left: 90px;
+        left: 10%;
         // border-top: solid rgb(46, 45, 45) 160px;
        
         position: relative;
