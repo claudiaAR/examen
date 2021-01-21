@@ -26,7 +26,6 @@ export default function AllPosts() {
                         alt,
                     }
                 }
-                
             }`
         )
         .then((data) => setAllPosts(data))
