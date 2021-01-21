@@ -34,12 +34,12 @@ useEffect(() => {
     }, []);
 
     // let internshipProject = () => {
-    //     const americanRestaurants = restaurants.filter( restaurant => restaurant.category === "american");
-    //     this.setState({restaurants: americanRestaurants});
-    //     console.log(americanRestaurants);
+    //     const internship = tags.filter( post => tags === "internship");
+    //     this.setState({tags: internship});
+    //     console.log(internship);
     //   }
 
-    if (!internshipData) return <div>Loading...</div>
+    if (!internshipData) return <div>Loading... What is happening? OMG  😬  😱</div>
 
 
     return (
