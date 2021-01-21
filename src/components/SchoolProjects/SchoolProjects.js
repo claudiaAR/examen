@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link, useLocation } from "react-router-dom";
 // import styles from "./allPosts.module.scss";
-import { useMousePosition } from "../Animation/useMousePosition"
+// import { useMousePosition } from "../Animation/useMousePosition"
 
 export default function SchoolProjects() {
     const [allPostsData, setAllPosts] = useState(null);
-    const position = useMousePosition();
+    // const position = useMousePosition();
     const location = useLocation()
     console.log(location)
 

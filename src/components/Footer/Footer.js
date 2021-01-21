@@ -57,7 +57,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     >
                     <img  
-                        src={urlFor(footerData.iconOne).width(50).url()} 
+                        src={urlFor(footerData.iconOne).width(30).url()} 
                         alt="social media" 
                     /> 
                     </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                     >
                     
                         <img  
-                            src={urlFor(footerData.iconTwo).width(48).url()} 
+                            src={urlFor(footerData.iconTwo).width(28).url()} 
                             alt="social media" 
                         /> 
                     </a>

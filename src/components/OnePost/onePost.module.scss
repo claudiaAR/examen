@@ -5,16 +5,12 @@
     // background-color: peru;
 }
 
-.text{
-    // padding: 4rem;
-    // border: solid 3px yellow;
+.text { 
     margin: 0 auto;
     width: 100%;
    
     * {
         // background: thistle;
-        // padding: 1rem 0;
-        // border: solid 3px rebeccapurple;
         margin: 0 auto;
     }
 
@@ -33,6 +29,16 @@
         max-width: 30rem;
         padding: 0 30px;
     }
+    ul{
+        flex-direction: column;
+    }
+    
+    li{
+        background: green;
+        list-style-type: none;
+        height: 20px;
+    }
+
     h1 {
         max-width: 30rem;
         padding: 5px 10px 10px 20px;
@@ -47,14 +53,14 @@
 .spanSvg {
     // border: solid 3px darkcyan;
     // transform: rotate(90deg);
-    position: absolute;
+    // position: absolute;
     // left: 153px;
     // top: 44rem;
     animation: hello 5s ease-in-out 2s normal forwards ;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     // animation: hello 8s infinite;
-    // position: sticky;
+    position: sticky;
     left: 641px;
     // top: 35rem;
     // left: 621px;
@@ -105,7 +111,7 @@
     font-size: 1.25rem;
     padding: 90px 0;
     display: flex;
-    border-bottom: 90px solid white;
+    border-bottom: 87px solid white;
 
 }
 
@@ -192,11 +198,8 @@
   }
 .animation {
     animation: mymove ease-out 2s ;
-    // top: -13px;
-    // right: 150px;
     top: 0;
     position: absolute;
-    // z-index: 5;
     width: 100vw;
     height: 100vh;
 }
@@ -211,19 +214,8 @@
   }
 
 .flexImages {
-    // display: flex;
-    // // flex-wrap: wrap;
-    // justify-content: center;
-    // align-items: center;  
-    // margin-top: 5rem;
-    // width: 800px;
-    // border: solid 3px olivedrab;
-    // background-color: orchid;
-    // height: 400px;
-    // width: 100vw;
     margin-top: 18rem;
     border-bottom: 120px solid white;
-    // overflow: hidden;
 
     *{
         margin: 0 auto;
@@ -247,46 +239,26 @@
     max-width: 800px;
 }
 .imageRatio:nth-child(2){
-    // position: relative;
-//    border: solid yellow 2px;
    margin-right: 50%;
-//    margin-top: -37.6%;
     max-width: 400px;
     margin-top: 21px;
 }
 .imageRatio:nth-child(3){
-    // position: relative;
-//    border: solid purple 2px;
    margin-left: 50%;
-//    margin-top: -34.3%;
     margin-top: -13.3%;
     max-width: 400px;
-    // border: solid white 10px;
 }
 
 .imageRatio:before {
     content: "";
     display: block;
     width: 100%;
-    // padding-bottom: 66.66%; 600 x 400
     padding-bottom: 61.25%;
-    // background: red;
 }
 .imageRatio:before {
     content: "";
     display: block;
     width: 100%;
     padding-bottom: 61.25%;
-
-    // padding-bottom: 66.66%; 600 x 400
-    // padding-bottom: calc(6 / 8 * 100%);
-    // background: red;
 }
-
-// .test {
-//     // display: flex;
-//     border: solid red 2px;
-//     width: 20rem;
-//     height: 80rem;
-// }
 
