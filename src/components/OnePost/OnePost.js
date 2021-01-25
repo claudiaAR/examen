@@ -73,14 +73,13 @@ export default function OnePost() {
         <div className={styles.onePostWrapper}>
              <Paint className={styles.animation} color="#73D082"/>
             <div className={styles.titelWrapper}>
-
-            <h1 className={styles.verticalText}>{postData.title}</h1>
-                 {/* <div> 
-                    <img src={urlFor(postData.authorImage).width(100).url()}
-                    alt="Claudia is the author of the blog"
-                    /> 
-                <h1 className={styles.verticalText}>{postData.name}</h1> 
-                </div>  */}
+                <h1 className={styles.verticalText}>{postData.title}</h1>
+                    {/* <div> 
+                        <img src={urlFor(postData.authorImage).width(100).url()}
+                        alt="Claudia is the author of the blog"
+                        /> 
+                    <h1 className={styles.verticalText}>{postData.name}</h1> 
+                    </div>  */}
             </div>
          
         
