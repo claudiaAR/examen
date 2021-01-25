@@ -10,12 +10,14 @@ function Logo(props) {
 				viewBox="0 0 614 578"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
+				{...props}
 			>
 				<path
+				className="circle"
 					d="M608 289C608 444.96 473.584 572 307 572C140.416 572 6 444.96 6 289C6 133.04 140.416 6 307 6C473.584 6 608 133.04 608 289Z"
-					stroke="#333333"
+					stroke="black"
 					strokeWidth="12"
-					{...props}
+					
 				/>
 				<path
 					d="M293.5 100C293.5 100 130.268 149.597 140.134 266.048C150 382.5 407 297 407 297"
