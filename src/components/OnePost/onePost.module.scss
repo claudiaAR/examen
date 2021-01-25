@@ -1,8 +1,9 @@
 // #121A24
 
 .onePostWrapper {
-    overflow: auto;
-    // background-color: peru;
+    // overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .text { 
@@ -61,10 +62,12 @@
     stroke-dashoffset: 1000;
     // animation: hello 8s infinite;
     position: sticky;
-    left: 641px;
+    // left: 641px;
     // top: 35rem;
     // left: 621px;
-    top: 23rem;
+    // top: 23rem;
+    left: 67rem;
+    top: 0rem;
     font-size: 4.375rem;
     max-width: 329px;
     max-height: 126px;
@@ -156,13 +159,17 @@
 // }
 
 .titelWrapper {
-    flex-wrap: wrap;
-    overflow-x: none;
+    // flex-wrap: wrap;
+    // overflow-x: none;
     display: flex; 
     justify-content: center;
     align-items: center;   
-    z-index: 1000;
-    width: 100%;
+    // z-index: 1000;
+    // width: 100%;
+    // text-align: center;
+    padding: 2rem 0;
+    z-index: 10;
+    height: 35rem;
 }
 
 .verticalText {
@@ -172,19 +179,20 @@
     transform: rotate(90deg);
     color: black;
     font-size: 3.75rem;   
-    margin-top: 180px;
+    margin-top: 41px;
     text-transform: uppercase;
     animation: headLine 2s ease-out;
     // border: solid 4px red;
-    max-width: 70%;
+    // max-width: 20rem;
+    max-width: 25rem;
 }
 
 @keyframes headLine {
     from {
-      margin-top:-50px;
+      margin-top:-100px;
     }
     to {
-        margin-top:180px;
+        margin-top:41px;
       }
   }
 
@@ -214,8 +222,9 @@
   }
 
 .flexImages {
-    margin-top: 18rem;
+    margin-top: 6rem;
     border-bottom: 120px solid white;
+    padding: 0 20px;
 
     *{
         margin: 0 auto;
@@ -246,7 +255,7 @@
 .imageRatio:nth-child(3){
    margin-left: 50%;
     margin-top: -13.3%;
-    max-width: 400px;
+    max-width: 576px
 }
 
 .imageRatio:before {
