@@ -3,6 +3,8 @@ import sanityClient from "../../client.js";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./allPosts.module.scss";
 import { useMousePosition } from "../Animation/useMousePosition"
+import Paint from "../Animation/Paint"
+
 // import post from "../../../portfolio/schemas/post.js";
 
 
@@ -40,10 +42,14 @@ export default function AllPosts() {
 
     return (
         <div className={styles.flex}>
+             <Paint className={styles.animation}color="#FFF490"/>
             <div className={styles.landingTitle}>
             {position.x}:{position.y}
                 <h1 className={styles.verticalText}>Work</h1>
             </div>
+        {/* <div className={styles.animationWrapper}>
+            <Paint className={styles.animation}color="#FFF490"/>
+        </div> */}
        
 
         {/* {allPostsData.tags === 'internship' ? */}
