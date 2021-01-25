@@ -1,16 +1,33 @@
 .flexWrapperNav {
-    position: relative;
+    // position: relative;
+    // width: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // position: absolute;
     width: 100%;
     display: flex;
+    top: 41rem;
     align-items: center;
     justify-content: center;
+    z-index: 999999;
+    background: green;
 }
 
 .menu {
-    position: absolute;
-    z-index: 1000;
-    top: 466px;
+    // position: inherit;
+    // z-index: 100;
+    // // top: 466px;
+    // display: flex;
+    // padding-top: 34rem;
+    position: inherit;
+    z-index: 100;
     display: flex;
+    position: absolute;
+    // top: 690px;
+    top: 31rem;
+    /* padding-top: 34rem; */
+
     // overflow: hidden;
 
     // position: fixed;
@@ -19,7 +36,9 @@
      
     * {
         // padding: 20px;
-        padding: 9px;
+        // padding: 9px;
+        padding: 12px 16px;
+
         border: solid 1px black;
         text-decoration: none;
         color: black;
