@@ -7,16 +7,16 @@ export default function NavBar() {
     
     return (
         <header>
-            <div className={styles.flexWrapper}>
+            <div className={styles.flexWrapperNav}>
                 <nav className={styles.menu}>
                     <NavLink to="/" exact>
-                        All projects
+                        Home
                     </NavLink>
-                    <NavLink to="/schoolProjects">
-                        School project
+                    <NavLink to="/work">
+                        Work
                     </NavLink>
                     <NavLink to="/internship">
-                        Internship
+                        design
                         {/* <Internship /> */}
                     </NavLink>
                 </nav>
