@@ -1,3 +1,7 @@
+.bgColor {
+    background-color: seashell;
+}
+
 .center{
     display: flex;
     justify-content: center;
@@ -20,10 +24,10 @@
 //     left: calc(100vw / 2);
 // }
 
-* {
-    overflow-x: auto;
-    overflow-y: auto;
-}
+// * {
+//     overflow-x: auto;
+//     overflow-y: auto;
+// }
 
 .flexWrapper {
     position: relative;
@@ -60,13 +64,32 @@
     //   }
 }
 
+.skyWrapper{
+    // width: 100vw;
+    // position: absolute;
+    // background: aquamarine
+    // background-position: top;
+
+    *{
+        position: fixed;
+        top: -16rem;
+        width: 70%;
+        
+    }
+}
 
 .test{
-    z-index: 300;
-    position:absolute;
-    background-color: seashell;
+    // z-index: ;
+    // position:absolute;
+   
     // position: fixed;
     height: 95%;
     width: 100%;
-    top: 0;
+  
+
+    *{
+        position: fixed;
+        bottom: -7.5rem;
+    }
 }
+
