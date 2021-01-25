@@ -71,7 +71,6 @@ export default function OnePost() {
 
     return(
         <div className={styles.onePostWrapper}>
-
              <Paint className={styles.animation} color="#73D082"/>
             <div className={styles.titelWrapper}>
 

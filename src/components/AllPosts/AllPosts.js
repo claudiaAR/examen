@@ -3,6 +3,7 @@ import sanityClient from "../../client.js";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./allPosts.module.scss";
 import { useMousePosition } from "../Animation/useMousePosition"
+// import post from "../../../portfolio/schemas/post.js";
 
 
 
@@ -19,6 +20,11 @@ export default function AllPosts() {
                 title,
                 slug,
                 tags,
+                // 'internships': *[_type == "post" && 'internship' in tags]{
+                //     _id,
+                //     title,
+                //     slug,
+                // },
                 mainImage{
                     asset ->{
                         _id,
@@ -26,18 +32,21 @@ export default function AllPosts() {
                         alt,
                     }
                 }
-            }`
+              }`
         )
         .then((data) => setAllPosts(data))
         .catch(console.error)
     }, [])
+
     return (
         <div className={styles.flex}>
             <div className={styles.landingTitle}>
             {position.x}:{position.y}
                 <h1 className={styles.verticalText}>Work</h1>
             </div>
+       
 
+        {/* {allPostsData.tags === 'internship' ? */}
             <div className={styles.wrapper}>
                 {allPostsData &&
                     allPostsData.map((post, index) => (
@@ -48,7 +57,6 @@ export default function AllPosts() {
                                     caption={post.mainImage.caption} 
                                     alt={post.mainImage.alt}
                                 />
-                              
                                 <h2 className={styles.title}>
                                     {post.title}
                                 </h2>
@@ -56,8 +64,8 @@ export default function AllPosts() {
                         </Link>
 
                     ))}
-               
             </div>
+               {/* : allPostsData} */}
         </div>
     )
 }
