@@ -13,6 +13,7 @@ import footer from './footer'
 import localString from './localString'
 import richText from './richText'
 import figure from './figure'
+import design from './design'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,6 +26,7 @@ export default createSchema({
     // in the studio.
     footer,
     post,
+    design,
     author,
     category,
     // When added to this list, object types can be used as
@@ -32,6 +34,7 @@ export default createSchema({
     blockContent,
     localString,
     richText,
-    figure
+    figure,
+  
   ]),
 })
