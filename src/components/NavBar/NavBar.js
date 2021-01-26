@@ -9,15 +9,14 @@ export default function NavBar() {
         <header>
             <div className={styles.flexWrapperNav}>
                 <nav className={styles.menu}>
-                    <NavLink to="/" exact>
+                    <NavLink to="/" exact className={styles.hover}>
                         Home
                     </NavLink>
-                    <NavLink to="/work">
+                    <NavLink to="/work" className={styles.hover}>
                         Work
                     </NavLink>
-                    <NavLink to="/internship">
-                        design
-                        {/* <Internship /> */}
+                    <NavLink to="/design" className={styles.hover}>
+                        Design
                     </NavLink>
                 </nav>
             </div>
