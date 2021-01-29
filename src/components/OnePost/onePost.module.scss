@@ -1,7 +1,4 @@
-// #121A24
-
 .onePostWrapper {
-    // overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -11,13 +8,8 @@
     width: 100%;
    
     * {
-        // background: thistle;
         margin: 0 auto;
     }
-
-    // ul li{
-    //     // border: solid 3px pink;
-    // }
 
     img {
         display: flex;
@@ -181,7 +173,8 @@
     // text-align: center;
     padding: 2rem 0;
     z-index: 10;
-    height: 35rem;
+    // height: 35rem;
+    height: 20rem;
 }
 
 .verticalText {
@@ -190,8 +183,8 @@
     stroke-dashoffset: 1000;
     transform: rotate(90deg);
     color: black;
-    font-size: 3.75rem;   
-    margin-top: 41px;
+    font-size: 3.75rem;     
+    margin-top: 121px;
     text-transform: uppercase;
     animation: headLine 2s ease-out;
     // border: solid 4px red;
@@ -204,7 +197,7 @@
       margin-top:-100px;
     }
     to {
-        margin-top:41px;
+        margin-top: 121px;
       }
   }
 
@@ -234,7 +227,7 @@
   }
 
 .flexImages {
-    margin-top: 6rem;
+    margin-top: 13rem;
     border-bottom: 120px solid white;
     padding: 0 20px;
 
