@@ -11,22 +11,8 @@
 
 
 .title {
-    // position: relative;
-    // top: -67px;
-    // background-color: aquamarine;
-    // width: 400px;
-    // height: 66px;
-    // text-align: center;
-    // padding-top: 15px;
-    // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
-    // box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
-    // border-radius: 2px 2px 2px 30px;
-
     display: none;
     position: relative;
-    // top: -380px;
-    // right: -32px;
-    // width: 400px;
 }
 
 .title:hover {
@@ -39,7 +25,6 @@
 
 .wrapper {
     flex-wrap: wrap;
-    // background-color: red;
     overflow-x: none;
     display: flex; 
     justify-content: center;
@@ -56,19 +41,15 @@
     // grid-template-columns: repeat(auto-fit, minmax(329px, 400px));
 
     .heroImage {
-        // width: 200px; 
-        // border: pink solid 2px;
-        // place-self: center;
-        // width: 100%;
-        max-width: 400px;
-        height: 400px;
-        object-fit: scale-down;
-        // box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.2);
-        z-index: 70;
-        flex: 0 0 calc(50% - 0.5em);
-        // margin: 0 calc(115px / 4);
-        margin: 20px calc(183px / 4);
-        padding: 3rem;
+      max-width: 400px;
+      height: 400px;
+      object-fit: scale-down;
+      z-index: 70;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: calc(50% - 0.5em);
+      margin: 20px calc(183px / 4);
+      padding: 3rem;
     }
 
     .heroImage:hover{
@@ -90,35 +71,16 @@
 
         }
       }
-    
-    // .heroImage:first-child{
-    //     border: 3px yellow solid;
-    // }
 }
 
 
 
 .landingTitle{
-    // background: thistle;
     text-align: center;
     padding: 2rem 0;
     z-index: 10;
     height: 35rem;
-    // width: 15rem;
-    // height: 15rem;
-    // background: linear-gradient(
-    //     to right,
-    //     rgba(245, 70, 66, 0.75),
-    //     rgba(8, 83, 156, 0.75)
-    // );
-    // position: absolute;
-    // border-radius: 50%;
-    // z-index: 1;
 }
-
-// .landingTitle > * {
-//     z-index: 2;
-// }
 
 @keyframes mymove {
     from {
@@ -171,11 +133,7 @@
 .animation {
   animation: mymove ease-out 3s;
   top: -13px;
-  // right: 150px;
-  // left: 641px;
-  // top: 35rem;
   position: absolute;
-  // z-index: 5;
   width: 100vw;
   height: 100vh;
 }

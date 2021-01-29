@@ -1,7 +1,4 @@
-// #121A24
-
 .onePostWrapper {
-    // overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -11,13 +8,8 @@
     width: 100%;
    
     * {
-        // background: thistle;
         margin: 0 auto;
     }
-
-    // ul li{
-    //     // border: solid 3px pink;
-    // }
 
     img {
         display: flex;
@@ -235,7 +227,7 @@
   }
 
 .flexImages {
-    margin-top: 6rem;
+    margin-top: 13rem;
     border-bottom: 120px solid white;
     padding: 0 20px;
 
