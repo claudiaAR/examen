@@ -5,15 +5,23 @@ import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
 import styles from "./onePost.module.scss";
 import Paint from "../Animation/Paint"
+import PageNotFound from "../404/PageNotFound"
+
 
 // const serializers = {
-//     types: {
-//       code: props => (
-//         <pre data-language={props.node.language}>
-//           <code>{props.node.code}</code>
+//     marks: {
+//       link: ({props}) => (
+//         <pre>
+//             {JSON.stringify(props, null, 2)}
 //         </pre>
 //       )
 //     }
+// }
+// console.log('*****This is the content in*****', serializers)
+// const serializers = {
+//     types: {
+//       image: ({ node: { asset, alt } }) => <img src={urlFor(asset).url()} alt={alt} className="red" />,
+//     },
 //   }
 
 
@@ -37,20 +45,27 @@ export default function OnePost() {
                     asset->{
                         _id,
                         url
-                    }
+                    },
+                    hotspot,
+                    alt
                 },
                 secundaryImage{
                     asset->{
                         _id,
-                        url
-                    }
+                        url,
+                    },
+                    alt,
+                    hotspot,
                 },
                 thirdImage{
                     asset->{
                         _id,
-                        url
-                    }
+                        url,
+                    },
+                    alt,
+                    hotspot,
                 },
+                excerpt,
                 body, 
                 learnMore,
                 "name":category->title, 
@@ -59,19 +74,19 @@ export default function OnePost() {
             }`,
             { slug }
         )
-        .then((data) => setPostData(data[0]))
+        // .then((data) => setPostData(data[0]))
+        .then((data) => console.log(data) || setPostData(data[0]))
         .catch(console.error);
     }, [slug]);
-
-    if (!postData) return <div>Loading...</div>
-
+   
+    if (!postData) return <div> You see me Loading...</div>
 
 
     // const [inHover, setHover] = useState(false);
 
     return(
         <div className={styles.onePostWrapper}>
-             <Paint className={styles.animation} color="#73D082"/>
+             <Paint className={styles.animation} color="#fff5ee"/>
             <div className={styles.titelWrapper}>
                 <h1 className={styles.verticalText}>{postData.title}</h1>
                     {/* <div> 
@@ -96,14 +111,12 @@ export default function OnePost() {
                 </svg>
             </span>
 
-        
+            
                 <div className={styles.imageRatio}>
                     <img 
                         className={styles.ratioContent} 
                         src={urlFor(postData.mainImage).width(800).height(494).url()} 
-                        alt={postData.alt} 
-                        projectId={sanityClient.clientConfig.projectId}
-                        dataset={sanityClient.clientConfig.dataset}
+                        alt={postData.mainImage.alt} 
                     />
                 </div>
 
@@ -111,18 +124,18 @@ export default function OnePost() {
                     <img 
                         className={styles.ratioContent} 
                         src={urlFor(postData.secundaryImage).width(400).url()} 
-                        alt="main representation of post" 
-                        projectId={sanityClient.clientConfig.projectId}
-                        dataset={sanityClient.clientConfig.dataset}
+                        alt={postData.secundaryImage.alt} 
                     />
+                   
                 </div>
                 <div className={styles.imageRatio}>
                     <img 
                         className={styles.ratioContent} 
                         src={urlFor(postData.thirdImage).width(400).height(247).url()} 
-                        alt="main representation of post" 
+                        alt={postData.thirdImage.alt} 
                     /> 
                 </div>
+                
             </div>
 
           
@@ -130,10 +143,12 @@ export default function OnePost() {
                 <div className={styles.text}>
                 {/* <div className={styles.imageRatio}> */}
                     <BlockContent
-                    blocks={postData.body}
-                    imageOptions={{w: 400, fit: 'max', dpr:1}}
-                    projectId={sanityClient.clientConfig.projectId}
-                    dataset={sanityClient.clientConfig.dataset}
+                        // serializers={serializers}
+                        blocks={postData.body}
+                        imageOptions={{w: 400, fit: 'max', dpr:1}}
+                        projectId={sanityClient.clientConfig.projectId}
+                        dataset={sanityClient.clientConfig.dataset}
+                        alt={postData.alt} 
                     />
                 {/* </div> */}
                 </div>
@@ -142,13 +157,16 @@ export default function OnePost() {
             <div className={styles.storyTest}>
                 <div className={styles.text}>
                     <BlockContent
-                    className={styles.test}
-                    blocks={postData.learnMore}
-                    imageOptions={{w: 400, fit: 'max', dpr:1}}
-                    projectId={sanityClient.clientConfig.projectId}
-                    dataset={sanityClient.clientConfig.dataset}
+                        // serializers={serializers}
+                        className={styles.test}
+                        blocks={postData.learnMore}
+                        imageOptions={{w: 400, fit: 'max', dpr:1}}
+                        projectId={sanityClient.clientConfig.projectId}
+                        dataset={sanityClient.clientConfig.dataset}
+                        alt={postData.alt} 
                     />
                 </div>
+            
             </div>
         </div>
     )
