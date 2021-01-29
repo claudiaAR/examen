@@ -95,7 +95,8 @@
     align-items: center;   
     padding: 2rem 0;
     z-index: 10;
-    height: 35rem;
+    height: 20rem;
+    // height: 35rem;
 }
 
 .verticalText {
@@ -103,7 +104,7 @@
     stroke-dashoffset: 1000;
     transform: rotate(90deg);
     color: black;
-    font-size: 3.75rem;   
+    font-size: 3rem;   
     margin-top: 41px;
     text-transform: uppercase;
     animation: headLine 2s ease-out;
