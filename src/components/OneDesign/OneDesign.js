@@ -6,6 +6,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import styles from './oneDesign.module.scss';
 import Paint from '../Animation/Paint';
 
+
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
 	return builder.image(source);
@@ -21,16 +22,15 @@ export default function OneDesign() {
 		() => {
 			sanityClient
 				.fetch(
-					`*[slug.current == $slug]{
+				`*[slug.current == $slug]{
                 title,
                 slug,
                 mainImage{
-                    alt,
                     asset->{
                         _id,
-                        url,
-                       
-                    }
+                        url
+                    },
+                    alt
                 },
                 secundaryImage{
                     alt,
@@ -61,12 +61,12 @@ export default function OneDesign() {
 		},
 		[ slug ]
 	);
-
-	if (!oneDesignData) return <div>Loading...</div>;
+        // console.log(oneDesignData.mainImage.alt)
+	if (!oneDesignData) return <div> You see me Loading...</div>;
 
 	return (
 		<div className={styles.onePostWrapper}>
-			<Paint className={styles.animation} color="#034A30" />
+			<Paint  className={styles.animation} color="#034A30" />
 			<div className={styles.titelWrapper}>
 				<h1 className={styles.verticalText}>{oneDesignData.title}</h1>
 			</div>
@@ -87,8 +87,8 @@ export default function OneDesign() {
 				<div className={styles.topImageWrap}>
 					<img
 						className={styles.imageContent}
-						src={urlFor(oneDesignData.mainImage).width(800).height(494).url()}
-						alt={oneDesignData.alt}
+						src={urlFor(oneDesignData.mainImage).width(800).height(4).url().dpr(2)}
+						alt={oneDesignData.mainImage.alt}
 					/>
 				</div>
 
@@ -96,14 +96,14 @@ export default function OneDesign() {
 					<img
 						className={styles.imageContent}
 						src={urlFor(oneDesignData.secundaryImage).width(400).url()}
-						alt="main representation of post"
+						alt={oneDesignData.secundaryImage.alt}
 					/>
 				</div>
 				<div className={styles.topImageWrap}>
 					<img
 						className={styles.imageContent}
 						src={urlFor(oneDesignData.thirdImage).width(400).height(247).url()}
-						alt="main representation of post"
+						alt={oneDesignData.thirdImage.alt}
 					/>
 				</div>
 			</div>

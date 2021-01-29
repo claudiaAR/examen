@@ -5,8 +5,6 @@ import styles from './allPosts.module.scss';
 import { useMousePosition } from '../Animation/useMousePosition';
 import Paint from '../Animation/Paint';
 
-// import post from "../../../portfolio/schemas/post.js";
-
 export default function AllPosts() {
 	const [ allPostsData, setAllPosts ] = useState(null);
 	const position = useMousePosition();
@@ -17,39 +15,31 @@ export default function AllPosts() {
 		sanityClient
 			.fetch(
 				`*[_type == "post" ]{
-                title,
-                slug,
-                tags,
-                // 'internships': *[_type == "post" && 'internship' in tags]{
-                //     _id,
-                //     title,
-                //     slug,
-                // },
-                mainImage{
-                    asset ->{
-                        _id,
-                        url,
-                        alt,
-                    }
-                }
-              }`
+					title,
+					slug,
+					tags,
+					mainImage{
+							alt,
+						asset -> {
+							_id,
+							url,
+						}
+					},
+				}`
 			)
+			// .then((data) => console.log(data) || setAllPosts(data[0]))
 			.then((data) => setAllPosts(data))
 			.catch(console.error);
 	}, []);
 
 	return (
 		<div className={styles.flex}>
-			<Paint className={styles.animation} color="#FFF490" />
+			<Paint className={styles.animation} color="#F3B2A7" />
 			<div className={styles.landingTitle}>
 				{position.x}:{position.y}
 				<h1 className={styles.verticalText}>Work</h1>
 			</div>
-			{/* <div className={styles.animationWrapper}>
-            <Paint className={styles.animation}color="#FFF490"/>
-        </div> */}
 
-			{/* {allPostsData.tags === 'internship' ? */}
 			<div className={styles.wrapper}>
 				{allPostsData &&
 					allPostsData.map((post, index) => (
@@ -66,7 +56,6 @@ export default function AllPosts() {
 						</Link>
 					))}
 			</div>
-			{/* : allPostsData} */}
 		</div>
 	);
 }

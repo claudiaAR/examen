@@ -6,7 +6,7 @@ import NotFoundTop from '../Animation/NotFoundTop';
 export default function PageNotFound() {
 
     return (
-        <div>
+        <div className={styles.lol}>
             <div className={styles.topWrapper}>
                 <NotFoundTop />
             
@@ -15,6 +15,5 @@ export default function PageNotFound() {
                 <NotFound />
             </div>
         </div>
-     
     )
 }

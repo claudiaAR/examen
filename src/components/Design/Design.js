@@ -32,7 +32,7 @@ export default function Design() {
 			.then((data) => setDesignData(data))
 			.catch(console.error);
     }, []);
-    console.log(designData)
+    // console.log(designData.mainImage.alt)
 
 	// let internshipData = () => {
 	//     const internship = tags.filter(tags === "internship");
@@ -44,7 +44,7 @@ export default function Design() {
 
 	return (
 		<div className={styles.flex}>
-				<Paint className={styles.animation} color="#FFF490" />
+				<Paint className={styles.animation} color="#6A75C1" />
 			<div className={styles.landingTitle}>
 			
 				<h1 className={styles.verticalText}>Design</h1>

@@ -10,11 +10,13 @@
     justify-content: space-between;
     // position: sticky;
     position: fixed;
+    // bottom: -60px;
     bottom: 0;
     background: white;
     width: 100%;
     margin-top: 190px;
     z-index: 500;
+    // animation: headLine 2s ease-out;
 
     h1{
         font-size: 100%;
@@ -42,7 +44,7 @@
     .col:nth-child(2):hover:before{
         content: "Hello 👋";
         color: pink;
-        left: 10%;
+        left: 7%;
         // border-top: solid rgb(46, 45, 45) 160px;
        
         position: relative;
@@ -55,3 +57,15 @@
     // }
 }
 
+.footerWrapper:hover{
+    bottom: 0;
+} 
+
+@keyframes headLine {
+    from {
+      margin-top:-100px;
+    }
+    to {
+        margin-top:41px;
+      }
+  }

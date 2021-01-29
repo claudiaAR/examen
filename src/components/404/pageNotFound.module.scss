@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    
+}
+
+.lol {
+    opacity: 0;
+    display: none;
+    animation: blank 2s forwards;
+    animation-delay: 7s;
+   
+}
+
+
+.wrapper{
+    background: #fff5ee;
+    position: relative;
+    * {
+        bottom: -15rem;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.topWrapper{
+    position: relative;
+    * {
+        top: -14rem;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes blank {
+    from {
+      oppscity: 0;
+    }
+    to {
+        opacity:1;
+        display: block;
+       
+      }
+  }

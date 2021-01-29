@@ -133,7 +133,6 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    fill: #034A30;
 }
 
 @keyframes mymove {
@@ -197,4 +196,11 @@
 
 .flex {
     display: flex;
+}
+
+.red{
+    background: hotpink;
+    width: 20%;
+    border: solid 10px red;
+    
 }
