@@ -1,23 +1,48 @@
-.flexWrapper {
-    position: relative;
+.flexWrapperNav {
     width: 100%;
     display: flex;
+    top: 41rem;
     align-items: center;
     justify-content: center;
+    z-index: 999999;
 }
 
 .menu {
+    position: inherit;
+    z-index: 100;
+    display: flex;
     position: absolute;
-    z-index: 1000;
-    top: 466px;
-    // display: flex;
-     
+    // top: 31rem;
+    top: 50%;
     * {
         // padding: 20px;
-        padding: 9px;
-        border: solid 1px black;
+        // padding: 9px;
+        padding: 12px 16px;
+
+        // border: solid 1px black;
         text-decoration: none;
         color: black;
     }
 
+}
+
+.hover {
+    width: 35%;
+    border-top: solid rgb(46, 45, 45) 1px;
+    border-bottom: solid black 1px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #000 50%, rgba(255, 245, 238, 0) 50%);
+    background-size: 100% 200%;
+    background-position: bottom left;
+    transition: all .5s ease-out;
+
+    
+}
+
+.hover:hover{
+    background-position: top left;
+   color: #fff5ee;
 }

@@ -1,16 +1,26 @@
 .navWrapper {
-    position: relative;
+    // position: relative;
+    background: linear-gradient(to bottom, #000 50%, #fff 50%);
+    background-size: 100% 200%;
+    background-position: bottom left;
+    transition: all .5s ease-out;
+
+   
+}
 
     .topMenu {
-        position: absolute;
+        position: fixed;
         display: flex;
         justify-content: space-between;
-        z-index: 1;
+        z-index: 5000;
         width: 100vw;
-    }
+        white-space: nowrap;
+        // background: thistle;
 
      a:nth-child(1){
         margin: 21px 0 0 47px;
+        
+        // z-index: 5000;
     }
      a:nth-child(2){
         text-decoration: none;
@@ -21,28 +31,40 @@
     }
 }
 
-
-.animationWrapper{
-    position: relative;
+.navWrapper:hover {
+    background-position: top left;
+    color: pink;
 }
 
-.animation {
-    animation: mymove ease-out 3s;
-    top: 0;
-    position: absolute;
-    // z-index: 5;
-    width: 100vw;
-    height: 100vh;
+.arrow{
+    white-space: nowrap;
 }
 
-@keyframes mymove {
-    from {
-      height:0vh;
-    }
-    to {
-        height:100vh;
-    }
-  }
+
+// .animationWrapper{
+//     position: relative;
+// }
+
+// .animation {
+//     animation: mymove ease-out 3s;
+//     top: -13px;
+//     // right: 150px;
+//     // left: 641px;
+//     // top: 35rem;
+//     position: absolute;
+//     // z-index: 5;
+//     width: 100vw;
+//     height: 100vh;
+// }
+
+// @keyframes mymove {
+//     from {
+//       height:0vh;
+//     }
+//     to {
+//         height:100vh;
+//     }
+//   }
 
 //   .animation {
 //     // animation: mymove ease-out 3s;

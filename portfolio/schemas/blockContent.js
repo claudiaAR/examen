@@ -57,6 +57,11 @@ export default {
                   isHighlighted: true
                 }
               },
+              {
+                title: 'Open in new window',
+                name: 'blank',
+                type: 'boolean'
+              }
             ],
           },
         ],

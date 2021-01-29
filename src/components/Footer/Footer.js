@@ -49,45 +49,35 @@ export default function Footer() {
     return (
         <div>
             <div className={styles.footerWrapper}>
-                <div className={styles.col}>
                 <a 
-                    href={footerData.link}
+                className={styles.col}
+                    href={footerData.linkOne}
                     alt='this'
-                    taget="_blank"
+                    target="_blank"
                     rel="noopener noreferrer"
                     >
                     <img  
-                        src={urlFor(footerData.iconOne).width(50).url()} 
+                        src={urlFor(footerData.iconOne).width(30).url()} 
                         alt="social media" 
                     /> 
-                    </a>
-                  
-                </div>
+                </a>
 
                 <h1 className={styles.col}>
                     {footerData.title}
-                    {/* <a 
-                    href={footerData.link}
-                    alt={footerData.title}
-                    taget="_blank"
-                    rel="noopener noreferrer"
-                    >{footerData.title}</a> */}
                 </h1>
 
-                 <div className={styles.col}>
                  <a 
-                    href={footerData.link}
+                    className={styles.col}
+                    href={footerData.linkTwo}
                     alt='this'
-                    taget="_blank"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    >
-                    
-                        <img  
-                            src={urlFor(footerData.iconTwo).width(48).url()} 
-                            alt="social media" 
-                        /> 
-                    </a>
-                </div>
+                >
+                    <img  
+                        src={urlFor(footerData.iconTwo).width(28).url()} 
+                        alt="social media" 
+                    /> 
+                </a>
             </div>
         </div>
      

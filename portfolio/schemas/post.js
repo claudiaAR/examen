@@ -39,14 +39,6 @@ export default {
         hotspot: true,
       },
       fields: [
-        // {
-        //   name: 'caption',
-        //   type: 'string',
-        //   title: 'Caption',
-        //   options: {
-        //     isHighlighted: true // <-- make this field easily accessible
-        //   }
-        // },
         {
           title: 'Alternative Text (A11y)',
           name: 'alt',
@@ -55,12 +47,6 @@ export default {
             isHighlighted: true // <-- make this field easily accessible
           }
         },
-        // {
-        //   // Editing this field will be hidden behind an "Edit"-button
-        //   name: 'attribution',
-        //   type: 'string',
-        //   title: 'Attribution',
-        // }
       ]
       // alt:{
       //   alt: 'string'
@@ -68,16 +54,24 @@ export default {
     },
     {
       name: 'secundaryImage',
-      title: 'Secundary image',
+      title: 'Secondary image',
       type: 'image',
       options: {
         hotspot: true,
       },
       fields: [
         {
-          title: 'Alternative Text (A11y)',
           name: 'alt',
+          title: 'Alternative Text (A11y)',
           type: 'string',
+          options: {
+            isHighlighted: true
+          }
+        },
+        {
+          title: 'remove image', 
+          name: 'hide',
+          type: 'boolean' , 
           options: {
             isHighlighted: true
           }
@@ -99,7 +93,7 @@ export default {
           type: 'string',
           options: {
             isHighlighted: true
-          }
+          },
         }
       ]
     },
@@ -115,6 +109,11 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'bodyTwo',
+      title: 'New rich text',
+      type: 'richText'
+    },
+    {
       name: 'body',
       description: 'Use h3 to make text apper vertically beside the first sections 3 images',
       title: 'Body',
@@ -124,6 +123,19 @@ export default {
       name: 'learnMore',
       title: 'LearnMore',
       type: 'blockContent',
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      description: 'add relevent taggs for improve SEO',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
     },
   ],
 

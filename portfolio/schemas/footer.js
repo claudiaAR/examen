@@ -1,6 +1,6 @@
 export default {
     name: 'footer',
-    title: 'footer',
+    title: 'Footer',
     type: 'document',
     fields: [
       {
@@ -29,6 +29,7 @@ export default {
       },
       {
         name: 'linkOne',
+        description: 'Link to LinkedIn',
         type: 'url',
       },
       {
@@ -41,6 +42,7 @@ export default {
       },
       {
         name: 'linkTwo',
+        description: 'Link to github',
         type: 'url',
       },
     ],

@@ -47,7 +47,6 @@
     // height: 100vh;
     // justify-self: center;
     padding: calc(100% * 30px);
-    border-bottom: solid white 220px;
     // display: grid;
     // column-gap: 2rem;
 
@@ -157,34 +156,3 @@
 //   }
 
 
-.pink{
-  border: solid 5px pink;
-  color: black;
-}
-
-
-.animationWrapper{
-  position: relative;
-  z-index: 500;
-}
-
-.animation {
-  animation: mymove ease-out 3s;
-  top: -13px;
-  // right: 150px;
-  // left: 641px;
-  // top: 35rem;
-  position: absolute;
-  // z-index: 5;
-  width: 100vw;
-  height: 100vh;
-}
-
-@keyframes mymove {
-  from {
-    height:0vh;
-  }
-  to {
-      height:100vh;
-  }
-}

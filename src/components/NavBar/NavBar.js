@@ -1,20 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./navBar.module.scss";
+// import Internship from "../Internship/Internship.js";
 
 export default function NavBar() {
+    
     return (
         <header>
-            <div className={styles.flexWrapper}>
+            <div className={styles.flexWrapperNav}>
                 <nav className={styles.menu}>
-                    <NavLink to="/" exact>
-                        All projects
+                    <NavLink to="/" exact className={styles.hover}>
+                        Home
                     </NavLink>
-                    <NavLink to="/projects">
-                        School project
+                    <NavLink to="/work" className={styles.hover}>
+                        Work
                     </NavLink>
-                    <NavLink to="/internship">
-                        Internship
+                    <NavLink to="/design" className={styles.hover}>
+                        Design
                     </NavLink>
                 </nav>
             </div>
