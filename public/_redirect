@@ -1,5 +1,1 @@
-# Example from netlify.toml for Netlify.com hosting
-[[redirects]]
-  from="/*"
-  to="/"
-  status=200
+/* /index.html 200
