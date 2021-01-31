@@ -20,9 +20,9 @@ function App() {
           <Route component={Home} path="/" exact />
           <Route component={Design} path="/design" />
           <Route component={AllPosts} path="/work" />
-          <Route component={PageNotFound} path="/pageNotFound" /> 
           <Route component={OnePost} path="/:slug" />
           <Route component={OneDesign} path="/:slug" />
+          <Route component={PageNotFound} /> 
         </Switch>
       <Footer />
     </BrowserRouter>
