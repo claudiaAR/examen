@@ -1,3 +1,5 @@
+@import 'styles/_colors.scss'; // assuming a styles directory under src/
+@import '~nprogress/nprogress'; // importing a css file from the nprogress node module
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
 *{
   font-family: 'Poppins', sans-serif;
