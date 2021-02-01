@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import styles from './home.module.scss';
 import Logo from '../Animation/Logo.js';
 // import Flower from "../Animation/Flower.js"
@@ -24,11 +24,6 @@ export default function Home() {
 			<div className={styles.flexWrapper}>
 				<div className={styles.absolute}>
 					<Logo />
-				</div>
-				<div>
-					{/* <Link to={'/work'} key="yes">
-                        <h1 className={styles.center}>WORK</h1>
-                    </Link> */}
 				</div>
 			</div>
 

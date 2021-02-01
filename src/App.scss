@@ -1,0 +1,15 @@
+@import './components/404/pageNotFound.module.scss';
+@import './components/AllPosts/allPosts.module.scss';
+@import './components/Design/design.module.scss';
+@import './components/Footer/footer.module.scss';
+@import './components/Home/home.module.scss';
+@import './components/Navbar/navbar.module.scss';
+@import './components/OneDesign/oneDesign.module.scss';
+@import './components/OnePost/onePost.module.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
+

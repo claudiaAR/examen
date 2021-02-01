@@ -7,6 +7,7 @@ import Home from "./components/Home/Home.js";
 import Design from "./components/Design/Design.js";
 import OneDesign from "./components/OneDesign/OneDesign.js";
 import PageNotFound from "./components/404/PageNotFound.js";
+import './App.scss';
 
  
 function App() {
@@ -20,9 +21,9 @@ function App() {
           <Route component={Home} path="/" exact />
           <Route component={Design} path="/design" />
           <Route component={AllPosts} path="/work" />
-          <Route component={PageNotFound} path="/pageNotFound" /> 
           <Route component={OnePost} path="/:slug" />
           <Route component={OneDesign} path="/:slug" />
+          <Route component={PageNotFound} /> 
         </Switch>
       <Footer />
     </BrowserRouter>

@@ -11,32 +11,22 @@
     z-index: 501;
 }
 
-// .relative {
-//     position: relative;
-//     background: seashell;
-//     border: solid hotpink 4px;
-//     width: 100vw;
-// }
-
-// .flex{
-//     position: absolute;
-//     top: 3rem;
-//     left: calc(100vw / 2);
-// }
-
-// * {
-//     overflow-x: auto;
-//     overflow-y: auto;
-// }
-
 .flexWrapper {
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .flexWrapper {
+        max-height: 30rem;
+        top: -119px;
+    }
+  }
 
 .absolute {
     position: absolute;
