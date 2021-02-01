@@ -1,45 +1,15 @@
-@import 'styles/_colors.scss'; // assuming a styles directory under src/
-@import '~nprogress/nprogress'; // importing a css file from the nprogress node module
+@import './components/404/pageNotFound.module.scss';
+@import './components/AllPosts/allPosts.module.scss';
+@import './components/Design/design.module.scss';
+@import './components/Footer/footer.module.scss';
+@import './components/Home/home.module.scss';
+@import './components/Navbar/navbar.module.scss';
+@import './components/OneDesign/oneDesign.module.scss';
+@import './components/OnePost/onePost.module.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
 *{
   font-family: 'Poppins', sans-serif;
   /* font-family: 'Roboto', sans-serif; */
 }
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

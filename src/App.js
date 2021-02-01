@@ -7,6 +7,7 @@ import Home from "./components/Home/Home.js";
 import Design from "./components/Design/Design.js";
 import OneDesign from "./components/OneDesign/OneDesign.js";
 import PageNotFound from "./components/404/PageNotFound.js";
+import './App.scss';
 
  
 function App() {
