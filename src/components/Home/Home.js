@@ -2,12 +2,9 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './home.module.scss';
 import Logo from '../Animation/Logo.js';
-// import Flower from "../Animation/Flower.js"
-// import Bottom from "../Animation/Bottom";
 import Bottom from '../Animation/Bottom.js';
 import Sky from '../Animation/Sky.js';
 // import { useMousePosition } from "../Animation/useMousePosition"
-// import post from "../../../portfolio/schemas/post.js";
 
 export default function Home() {
 
