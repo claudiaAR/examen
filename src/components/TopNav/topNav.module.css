@@ -1,0 +1,43 @@
+.navWrapper {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #000), color-stop(50%, #fff));
+  background: linear-gradient(to bottom, #000 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.topMenu {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 5000;
+  width: 100vw;
+  white-space: nowrap;
+}
+
+.topMenu a:nth-child(1) {
+  margin: 21px 0 0 47px;
+}
+
+.topMenu a:nth-child(2) {
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 53px 37px 0 0;
+}
+
+.navWrapper:hover {
+  background-position: top left;
+  color: pink;
+}
+
+.arrow {
+  white-space: nowrap;
+}
+/*# sourceMappingURL=topNav.module.css.map */

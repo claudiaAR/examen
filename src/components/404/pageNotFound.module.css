@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+}
+
+.lol {
+  opacity: 0;
+  display: none;
+  -webkit-animation: blank 2s forwards;
+          animation: blank 2s forwards;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.wrapper {
+  background: #fff5ee;
+  position: relative;
+}
+
+.wrapper * {
+  bottom: -15rem;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.topWrapper {
+  position: relative;
+}
+
+.topWrapper * {
+  top: -14rem;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+@-webkit-keyframes blank {
+  from {
+    oppscity: 0;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes blank {
+  from {
+    oppscity: 0;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+/*# sourceMappingURL=pageNotFound.module.css.map */
