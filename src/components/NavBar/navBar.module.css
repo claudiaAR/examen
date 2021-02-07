@@ -1,0 +1,52 @@
+.flexWrapperNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 41rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999999;
+}
+
+.menu {
+  position: inherit;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+}
+
+.menu * {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.hover {
+  width: 35%;
+  border-top: solid #2e2d2d 1px;
+  border-bottom: solid black 1px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  text-align: center;
+  padding: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #000), color-stop(50%, rgba(255, 245, 238, 0)));
+  background: linear-gradient(to bottom, #000 50%, rgba(255, 245, 238, 0) 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.hover:hover {
+  background-position: top left;
+  color: #fff5ee;
+}
+/*# sourceMappingURL=navBar.module.css.map */

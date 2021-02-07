@@ -1,0 +1,76 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footerWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  margin-top: 190px;
+  z-index: 500;
+}
+
+.footerWrapper h1 {
+  font-size: 100%;
+}
+
+.footerWrapper .col {
+  width: 35%;
+  border-top: solid #2e2d2d 1px;
+  border-bottom: solid #2e2d2d 1px;
+  border-left: solid #2e2d2d 1px;
+  text-align: center;
+  padding: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #000), color-stop(50%, #fff));
+  background: linear-gradient(to bottom, #000 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.footerWrapper .col:hover {
+  background-position: top left;
+}
+
+.footerWrapper .col:nth-child(2):hover:before {
+  content: "Hello 👋";
+  color: pink;
+  left: 7%;
+  position: relative;
+  top: 0;
+}
+
+.footerWrapper:hover {
+  bottom: 0;
+}
+
+@-webkit-keyframes headLine {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 41px;
+  }
+}
+
+@keyframes headLine {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 41px;
+  }
+}
+/*# sourceMappingURL=footer.module.css.map */
